@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hotel Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h1 class="title">Hotel Analytics</h1>
+</header>
+
+<!-- CONTROLS -->
+<div class="controls-container">
+  <div class="controls-row">
+    <div class="control-group">
+      <label>Hotel Type:</label>
+      <div class="button-group" id="hotel-filter">
+        <button class="btn active" data-value="all">All</button>
+        <button class="btn" data-value="City Hotel">City</button>
+        <button class="btn" data-value="Resort Hotel">Resort</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Year:</label>
+      <div class="button-group" id="year-filter">
+        <button class="btn active" data-value="all">All</button>
+        <button class="btn" data-value="2015">2015</button>
+        <button class="btn" data-value="2016">2016</button>
+        <button class="btn" data-value="2017">2017</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Country:</label>
+      <select id="country-filter" class="select">
+        <option value="all">All Countries</option>
+      </select>
+    </div>
+
+    <button id="play-btn" class="btn-play">▶ Play Animation</button>
+  </div>
+</div>
+
+<!-- KPI CARDS -->
+<div class="kpi-container">
+  <div class="kpi-card">
+    <span class="kpi-label">Total Bookings</span>
+    <span class="kpi-value" id="kpi-bookings">0</span>
+  </div>
+  <div class="kpi-card">
+    <span class="kpi-label">Cancellation Rate</span>
+    <span class="kpi-value" id="kpi-cancel-rate">0%</span>
+  </div>
+  <div class="kpi-card">
+    <span class="kpi-label">Avg. Price (ADR)</span>
+    <span class="kpi-value" id="kpi-adr">€0</span>
+  </div>
+  <div class="kpi-card">
+    <span class="kpi-label">Avg. Stay (nights)</span>
+    <span class="kpi-value" id="kpi-stay">0</span>
+  </div>
+</div>
+
+<!-- MAIN GRID -->
+<main class="dashboard-grid">
+  <section class="chart-card">
+    <h3>Monthly Bookings</h3>
+    <div id="chart-monthly"></div>
+  </section>
+
+  <section class="chart-card">
+    <h3>Cancellations</h3>
+    <div id="chart-cancel"></div>
+  </section>
+
+  <section class="chart-card">
+    <h3>Average Daily Rate (ADR)</h3>
+    <div id="chart-adr"></div>
+  </section>
+
+  <section class="chart-card">
+    <h3>Top Countries
+      <select id="sort-country" class="sort-select">
+        <option value="bookings">by Bookings</option>
+        <option value="cancel_rate">by Cancel Rate</option>
+        <option value="adr">by ADR</option>
+      </select>
+    </h3>
+    <div id="chart-countries"></div>
+  </section>
+
+  <section class="chart-card">
+    <h3>Market Segments</h3>
+    <div id="chart-segments"></div>
+    <div id="segment-legend"></div>
+  </section>
+
+</main>
+
+<!-- TOOLTIP -->
+<div id="tooltip" class="tooltip"></div>
+
+<script src="script.js"></script>
+</body>
+</html> 

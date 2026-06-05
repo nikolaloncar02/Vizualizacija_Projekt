@@ -1,22 +1,50 @@
-Hotel Analytics Dashboard
-Description
-Interactive dashboard for analyzing hotel booking data built with D3.js. Visualizes booking patterns, cancellation rates, pricing trends, and market segments for City and Resort hotels across 2015–2017. Features a cross-filter system where clicking any chart element instantly filters all other charts.
-Features
+# Hotel Analytics Dashboard
 
-5 interactive charts — Monthly Bookings, Cancellations, ADR Trend, Top Countries, Market Segments
-4 KPI cards — Total Bookings, Cancellation Rate, Avg. Price (ADR), Avg. Stay
-Cross-filter system — click any bar, segment or country to filter all other charts
-Play Animation — auto-cycles through years 2015–2017
-Tooltips on all chart elements
-Dark theme with animated transitions
+## Description
 
-Tech Stack
-HTML5, CSS3, JavaScript (ES6+), D3.js v7, CSV
-Installation
+Interactive dashboard for analyzing hotel booking data built with D3.js. Visualizes booking patterns, cancellation rates, pricing trends, and market segments for City and Resort hotels across 2015–2017.
+
+## Features
+
+- **5 interactive charts**
+  - Monthly Bookings  
+  - Cancellations  
+  - ADR Trend  
+  - Top Countries  
+  - Market Segments  
+
+- **4 KPI cards**
+  - Total Bookings  
+  - Cancellation Rate  
+  - Avg. Price (ADR)  
+  - Avg. Stay  
+
+- **Cross-filter system**
+  - Click any bar, segment, or country to filter all other charts instantly  
+
+- **Play Animation**
+  - Auto-cycles through years 2015–2017  
+
+- **Tooltips**
+  - Available on all chart elements  
+
+- **UI**
+  - Dark theme with animated transitions  
+
+## Tech Stack
+
+- HTML5  
+- CSS3  
+- JavaScript (ES6+)  
+- D3.js v7  
+- CSV  
+
+## Installation
 
 Clone the repository:
 
-bashgit clone https://github.com/YOUR_USERNAME/VIZUALIZACIJA_PROJEKT.git
+```bash
+git clone https://github.com/YOUR_USERNAME/VIZUALIZACIJA_PROJEKT.git
 
 Open the project folder in VS Code
 Install the Live Server extension
